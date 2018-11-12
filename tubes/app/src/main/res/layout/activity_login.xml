@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgg"
+    tools:context=".Login">
+
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="120dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="cursive"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="117dp"
+        android:text="Email"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/txtEmail"
+        android:layout_marginTop="174dp"
+        android:text="Password"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtEmail"
+        android:layout_alignStart="@+id/txtLogin"
+        android:ems="10"
+        android:hint="input email"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtPassword"
+        android:layout_alignStart="@+id/txtLogin"
+        android:ems="10"
+        android:hint="input password"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="193dp"
+        android:layout_marginStart="136dp"
+        android:background="@android:color/white"
+        android:text="Login"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+</RelativeLayout>
