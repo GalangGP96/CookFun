@@ -10,25 +10,24 @@
 
     <TextView
         android:id="@+id/txtLogin"
-        android:layout_width="121dp"
+        android:layout_width="143dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="120dp"
-        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp"
         android:fontFamily="cursive"
         android:text="Login"
-        android:textColor="@android:color/white"
-        android:textSize="40sp" />
+        android:textColor="@android:color/black"
+        android:textSize="60sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/txtEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/edtEmail"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="13dp"
-        android:layout_marginTop="117dp"
         android:text="Email"
         android:textColor="@android:color/black"
         android:textSize="20sp" />
@@ -37,9 +36,8 @@
         android:id="@+id/txtPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignBaseline="@+id/edtPassword"
         android:layout_alignStart="@+id/txtEmail"
-        android:layout_marginTop="174dp"
         android:text="Password"
         android:textColor="@android:color/black"
         android:textSize="20sp" />
@@ -48,8 +46,9 @@
         android:id="@+id/edtEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/txtEmail"
+        android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/txtLogin"
+        android:layout_marginTop="190dp"
         android:ems="10"
         android:hint="input email"
         android:inputType="textPersonName" />
@@ -58,8 +57,9 @@
         android:id="@+id/edtPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/txtPassword"
+        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/txtLogin"
+        android:layout_marginBottom="200dp"
         android:ems="10"
         android:hint="input password"
         android:inputType="textPersonName" />
@@ -69,9 +69,8 @@
         android:layout_width="98dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="193dp"
-        android:layout_marginStart="136dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="106dp"
         android:background="@android:color/white"
         android:text="Login"
         android:textColor="@android:color/holo_orange_dark"
