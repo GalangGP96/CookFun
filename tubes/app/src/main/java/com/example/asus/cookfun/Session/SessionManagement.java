@@ -48,7 +48,7 @@ public class SessionManagement {
     }
 
     public boolean isLoggedIn(){
-        return mSharedPreference.getBoolean(IS_LOGIN, true);
+        return mSharedPreference.getBoolean(IS_LOGIN, false);
     }
 
     public void logoutUser(){
