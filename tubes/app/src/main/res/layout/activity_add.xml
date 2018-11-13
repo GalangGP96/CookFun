@@ -40,6 +40,7 @@
         android:layout_marginEnd="26dp"
         android:layout_marginTop="131dp"
         android:ems="10"
+        android:hint="input nama resep"
         android:inputType="textPersonName" />
 
     <TextView
@@ -60,6 +61,7 @@
         android:layout_alignBaseline="@+id/txtBahan"
         android:layout_alignStart="@+id/edtNamaResep"
         android:ems="10"
+        android:hint="input bahan-bahan"
         android:inputType="textMultiLine" />
 
     <TextView
@@ -71,6 +73,7 @@
         android:layout_marginBottom="204dp"
         android:text="Foto"
         android:textColor="@android:color/white"
+
         android:textSize="20sp" />
 
     <Button
