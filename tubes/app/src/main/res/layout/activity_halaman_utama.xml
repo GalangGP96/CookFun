@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView2"
         android:layout_centerHorizontal="true"
-        android:text="Simpan resep dan pengalaman memasakmu"
+        android:text="Simpan resep dan berbagai pengalaman"
         android:textColor="@color/Gray"
         android:textSize="18sp"
         android:textStyle="bold" />
