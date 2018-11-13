@@ -27,7 +27,7 @@
         android:layout_alignBottom="@+id/edtNamaResep"
         android:layout_alignParentStart="true"
         android:layout_marginStart="13dp"
-        android:text="Nama Resep"
+        android:text="Nama Resep "
         android:textColor="@android:color/white"
         android:textSize="20sp" />
 
