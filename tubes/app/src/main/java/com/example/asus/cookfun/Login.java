@@ -36,12 +36,6 @@ public class Login extends AppCompatActivity {
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
         mSesion = new SessionManagement(getApplicationContext());
 
-        if (mSesion.isLoggedIn()){
-            Intent i = new Intent(getApplicationContext(),Home.class);
-            startActivity(i);
-            finish();
-        }
-
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
