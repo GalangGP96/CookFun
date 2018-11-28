@@ -5,5 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="Salmon">#f5b6a0</color>
     <color name="Gray">#696969</color>
+    <color name="Black">#000000</color>
+    <color name="JudulResep">#2ebc22</color>
 
 </resources>

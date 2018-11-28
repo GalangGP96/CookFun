@@ -16,7 +16,8 @@
         <activity android:name=".Add" />
         <activity android:name=".HalamanUtama">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"
+                    android:noHistory="true"/>
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
