@@ -16,8 +16,9 @@
         <activity android:name=".Add" />
         <activity android:name=".HalamanUtama">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"
-                    android:noHistory="true"/>
+                <action
+                    android:name="android.intent.action.MAIN"
+                    android:noHistory="true" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -25,7 +26,8 @@
         <activity android:name=".Register" />
         <activity
             android:name=".Navbar"
-            android:label="@string/title_activity_navbar"></activity>
+            android:label="@string/title_activity_navbar" />
+        <activity android:name=".detail"></activity>
     </application>
 
 </manifest>
