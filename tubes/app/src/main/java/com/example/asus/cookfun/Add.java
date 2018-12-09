@@ -37,10 +37,10 @@ public class Add extends AppCompatActivity {
 //            }
 //        });
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.navbar_botom);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.navbar_botom2);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentAdd()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container2,new FragmentAdd()).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -63,7 +63,7 @@ public class Add extends AppCompatActivity {
                     break;
             }
 
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container2,selectedFragment).commit();
 
             return true;
         }
