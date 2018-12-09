@@ -8,6 +8,7 @@
     tools:context=".detail">
 
     <TextView
+        android:id="@+id/txtMakanan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -20,30 +21,36 @@
         android:textStyle="bold|italic"
         android:typeface="serif" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="140dp"
-        android:text="Resep" />
-
     <ImageView
-        android:layout_width="363dp"
-        android:layout_height="251dp"
+        android:id="@+id/imgResep"
+        android:layout_width="367dp"
+        android:layout_height="170dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_gravity="center"
         android:layout_marginTop="53dp"
         android:src="@drawable/mk1" />
 
-    <TextView
-        android:id="@+id/textView9"
+    <EditText
+        android:id="@+id/edtResep"
         android:layout_width="match_parent"
-        android:layout_height="68dp"
+        android:layout_height="85dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="56dp"
-        android:text="Cara Membuat" />
+        android:layout_marginBottom="190dp"
+        android:ems="10"
+        android:hint="Daftar Resep"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/edtBahan"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="42dp"
+        android:ems="10"
+        android:hint="Bahan - bahan"
+        android:inputType="textMultiLine" />
 
 </RelativeLayout>
