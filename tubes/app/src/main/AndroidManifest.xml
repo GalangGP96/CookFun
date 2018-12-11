@@ -27,7 +27,8 @@
         <activity
             android:name=".Navbar"
             android:label="@string/title_activity_navbar" />
-        <activity android:name=".detail"></activity>
+        <activity android:name=".detail" />
+        <activity android:name=".Rinci"></activity>
     </application>
 
 </manifest>
