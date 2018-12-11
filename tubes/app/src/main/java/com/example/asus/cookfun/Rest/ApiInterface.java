@@ -3,6 +3,7 @@ package com.example.asus.cookfun.Rest;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 import com.example.asus.cookfun.Model.*;
@@ -22,4 +23,8 @@ public interface ApiInterface {
                                       @Field("password") String password,
                                       @Field("country") String country,
                                       @Field("description") String description);
+
+    //  Resep
+    @GET("ResepMain")
+    Call<GetResep> getResep();
 }

@@ -5,6 +5,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
     public static final String BASE_URL = "http://192.168.43.5/cookfun_web_service/index.php/";
+    public static final String BASE_USER = "http://192.168.43.5/cookfun_web_service/images/user/";
+    public static final String BASE_RESEP = "http://192.168.43.5/cookfun_web_service/images/resep/";
     private static Retrofit retrofit = null;
     public static Retrofit getClient() {
         if (retrofit==null) {
@@ -16,3 +18,4 @@ public class ApiClient {
         return retrofit;
     }
 }
+

@@ -1,62 +1,62 @@
 package com.example.asus.cookfun.Model;
 
 public class Resep {
-    String fotoUser,namaUser,fotoResep,judulResep,deskripsiResep,waktuResep;
+    String judul_resep,deskripsi,foto_resep,tanggal_post,username,photo;
 
-    public Resep(String fotoUser, String namaUser, String fotoResep, String judulResep, String deskripsiResep, String waktuResep) {
-        this.fotoUser = fotoUser;
-        this.namaUser = namaUser;
-        this.fotoResep = fotoResep;
-        this.judulResep = judulResep;
-        this.deskripsiResep = deskripsiResep;
-        this.waktuResep = waktuResep;
+    public Resep(String judul_resep, String deskripsi, String foto_resep, String tanggal_post, String username, String photo) {
+        this.judul_resep = judul_resep;
+        this.deskripsi = deskripsi;
+        this.foto_resep = foto_resep;
+        this.tanggal_post = tanggal_post;
+        this.username = username;
+        this.photo = photo;
     }
 
-    public String getFotoUser() {
-        return fotoUser;
+    public String getJudul_resep() {
+        return judul_resep;
     }
 
-    public void setFotoUser(String fotoUser) {
-        this.fotoUser = fotoUser;
+    public void setJudul_resep(String judul_resep) {
+        this.judul_resep = judul_resep;
     }
 
-    public String getNamaUser() {
-        return namaUser;
+    public String getDeskripsi() {
+        return deskripsi;
     }
 
-    public void setNamaUser(String namaUser) {
-        this.namaUser = namaUser;
+    public void setDeskripsi(String deskripsi) {
+        this.deskripsi = deskripsi;
     }
 
-    public String getFotoResep() {
-        return fotoResep;
+    public String getFoto_resep() {
+        return foto_resep;
     }
 
-    public void setFotoResep(String fotoResep) {
-        this.fotoResep = fotoResep;
+    public void setFoto_resep(String foto_resep) {
+        this.foto_resep = foto_resep;
     }
 
-    public String getJudulResep() {
-        return judulResep;
+    public String getTanggal_post() {
+        return tanggal_post;
     }
 
-    public void setJudulResep(String judulResep) {
-        this.judulResep = judulResep;
+    public void setTanggal_post(String tanggal_post) {
+        this.tanggal_post = tanggal_post;
     }
 
-    public String getDeskripsiResep() {
-        return deskripsiResep;
+    public String getUsername() {
+        return username;
     }
 
-    public void setDeskripsiResep(String deskripsiResep) {
-        this.deskripsiResep = deskripsiResep;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getWaktuResep() {
-        return waktuResep;
+    public String getPhoto() {
+        return photo;
     }
 
-    public void setWaktuResep(String waktuResep) {
-        this.waktuResep = waktuResep;
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }

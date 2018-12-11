@@ -9,18 +9,22 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.asus.cookfun.Model.*;
 import com.example.asus.cookfun.*;
+import com.example.asus.cookfun.Rest.ApiClient;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ResepAdapter extends RecyclerView.Adapter<ResepAdapter.ViewHolder>{
-    private ArrayList<Resep> rvData;
+    private List<Resep> rvData;
     private Context mContext;
 
-    public ResepAdapter(ArrayList<Resep> inputData, Context mContext) {
+    public ResepAdapter(List<Resep> inputData, Context mContext) {
         this.rvData = inputData;
         this.mContext = mContext;
     }
@@ -65,13 +69,14 @@ public class ResepAdapter extends RecyclerView.Adapter<ResepAdapter.ViewHolder>{
 
         Resep dt = rvData.get(position);
 
-        holder.namaUser.setText(dt.getNamaUser());
-        holder.judulResep.setText(dt.getJudulResep());
-        holder.deskripsiResep.setText(dt.getDeskripsiResep());
-        holder.waktuResep.setText(dt.getWaktuResep());
+        holder.namaUser.setText(dt.getUsername());
+        holder.judulResep.setText(dt.getJudul_resep());
+        holder.deskripsiResep.setText(dt.getDeskripsi());
+        holder.waktuResep.setText(dt.getTanggal_post());
 
-        Glide.with(mContext).asBitmap().load(dt.getFotoUser()).into(holder.fotoUser);
-        Glide.with(mContext).asBitmap().load(dt.getFotoResep()).into(holder.fotoResep);
+        Glide.with(mContext).asBitmap().load(ApiClient.BASE_USER+dt.getPhoto()).apply(RequestOptions.placeholderOf(R.drawable.ic_person_outline_black_24dp).diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true)).into(holder.fotoUser);
+//        Glide.with(mContext).load(ApiClient.BASE_RESEP+dt.getFoto_resep()).apply(RequestOptions.overrideOf(640,480).fitCenter().diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true)).into(holder.fotoResep);
+        Glide.with(mContext).load(ApiClient.BASE_RESEP+dt.getFoto_resep()).apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.NONE).skipMemoryCache(true)).into(holder.fotoResep);
 
     }
 
