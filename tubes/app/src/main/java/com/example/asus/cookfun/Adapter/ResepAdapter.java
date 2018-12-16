@@ -74,7 +74,7 @@ public class ResepAdapter extends RecyclerView.Adapter<ResepAdapter.ViewHolder>{
         holder.deskripsiResep.setText(dt.getDeskripsi());
         holder.waktuResep.setText(dt.getTanggal_post());
 
-        Glide.with(mContext).asBitmap().load(ApiClient.BASE_USER+dt.getPhoto()).apply(RequestOptions.placeholderOf(R.drawable.ic_person_outline_black_24dp).diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true)).into(holder.fotoUser);
+        Glide.with(mContext).asBitmap().load(ApiClient.BASE_USER+dt.getPhoto()).apply(RequestOptions.placeholderOf(R.drawable.logo).diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true)).into(holder.fotoUser);
 //        Glide.with(mContext).load(ApiClient.BASE_RESEP+dt.getFoto_resep()).apply(RequestOptions.overrideOf(640,480).fitCenter().diskCacheStrategy(DiskCacheStrategy.NONE).skipMemoryCache(true)).into(holder.fotoResep);
         Glide.with(mContext).load(ApiClient.BASE_RESEP+dt.getFoto_resep()).apply(RequestOptions.diskCacheStrategyOf(DiskCacheStrategy.NONE).skipMemoryCache(true)).into(holder.fotoResep);
 

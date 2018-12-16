@@ -1,5 +1,6 @@
 package com.example.asus.cookfun.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,10 +13,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.asus.cookfun.Adapter.ResepAdapter;
+import com.example.asus.cookfun.Listener.*;
 import com.example.asus.cookfun.Model.GetResep;
 import com.example.asus.cookfun.Model.Resep;
 import com.example.asus.cookfun.R;
 import com.example.asus.cookfun.Rest.*;
+import com.example.asus.cookfun.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,6 +65,21 @@ public class FragmentHome extends Fragment {
                 Log.e("Retrofit Get", t.toString());
             }
         });
+
+        rv.addOnItemTouchListener(new RecyclerTouchListener(getContext(), rv, new ClickListener() {
+            @Override
+            public void onClick(View view, int posi) {
+                Resep resep = dataset.get(posi);
+                Intent i = new Intent(getContext(),detail.class);
+                i.putExtra("id",resep.getId());
+                startActivity(i);
+            }
+
+            @Override
+            public void onLongClick(View view, int posi) {
+                
+            }
+        }));
 
         return view;
     }

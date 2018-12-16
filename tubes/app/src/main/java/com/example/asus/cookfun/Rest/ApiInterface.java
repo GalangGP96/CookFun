@@ -5,6 +5,9 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
+import retrofit2.http.Url;
 
 import com.example.asus.cookfun.Model.*;
 
@@ -27,4 +30,18 @@ public interface ApiInterface {
     //  Resep
     @GET("ResepMain")
     Call<GetResep> getResep();
+
+    //  Detail
+    @FormUrlEncoded
+    @POST("ResepDetail")
+    Call<GetDetail> getDetail(@Field("id") String id);
+
+    @GET("ResepDetail/{id}")
+    Call<GetDetail> getResepDetail(@Path("id") String id);
+
+    @GET("Bahan/{id}")
+    Call<GetBahan> getBahan(@Path("id") String id);
+
+    @GET("Langkah/{id}")
+    Call<GetLangkah> getLangkah(@Path("id") String id);
 }

@@ -1,24 +1,14 @@
 package com.example.asus.cookfun.Model;
 
-public class Resep {
-    String id,judul_resep,deskripsi,foto_resep,tanggal_post,username,photo;
+public class Detail {
+    String judul_resep,deskripsi,foto_resep,username,photo;
 
-    public Resep(String id,String judul_resep, String deskripsi, String foto_resep, String tanggal_post, String username, String photo) {
-        this.id = id;
+    public Detail(String judul_resep, String deskripsi, String foto_resep, String username, String photo) {
         this.judul_resep = judul_resep;
         this.deskripsi = deskripsi;
         this.foto_resep = foto_resep;
-        this.tanggal_post = tanggal_post;
         this.username = username;
         this.photo = photo;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getJudul_resep() {
@@ -43,14 +33,6 @@ public class Resep {
 
     public void setFoto_resep(String foto_resep) {
         this.foto_resep = foto_resep;
-    }
-
-    public String getTanggal_post() {
-        return tanggal_post;
-    }
-
-    public void setTanggal_post(String tanggal_post) {
-        this.tanggal_post = tanggal_post;
     }
 
     public String getUsername() {

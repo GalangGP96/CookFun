@@ -31,11 +31,11 @@ public class FragmentProfile extends Fragment {
         nama = (TextView) view.findViewById(R.id.textNamaUser);
         email = (TextView) view.findViewById(R.id.textEmailUser);
 
+        sessionManagement = new SessionManagement(getContext());
+
         HashMap<String, String> user=sessionManagement.getUserInformation();
         nama.setText("nama : "+user.get("nama"));
         email.setText("email : "+user.get("email"));
-
-        sessionManagement = new SessionManagement(getContext());
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,9 +43,6 @@ public class FragmentProfile extends Fragment {
                 sessionManagement.logoutUser();
             }
         });
-
-
-
 
         return view;
     }
