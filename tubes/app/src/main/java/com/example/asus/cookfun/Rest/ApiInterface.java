@@ -19,6 +19,9 @@ public interface ApiInterface {
                                   @Field("password") String password);
 
     //  User
+    @GET("User/{id}")
+    Call<GetUser> getUserBy(@Path("id") String id);
+
     @FormUrlEncoded
     @POST("User")
     Call<PostPutDelUser> postUser(@Field("username") String username,
@@ -44,4 +47,8 @@ public interface ApiInterface {
 
     @GET("Langkah/{id}")
     Call<GetLangkah> getLangkah(@Path("id") String id);
+
+    //  Favorite
+    @GET("Favorite/{id}")
+    Call<GetResep> getFavorite(@Path("id") String id);
 }
